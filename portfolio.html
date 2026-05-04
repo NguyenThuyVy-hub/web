@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - WebForge Studio</title>
-    <meta name="description" content="Khám phá các dự án thiết kế website đẳng cấp từ WebForge Studio.">
+    <meta name="description" content="Khám phá các dự án Marketing, Design, và AI Content đột phá từ WebForge Studio.">
+    <meta name="keywords" content="Portfolio, Dự án, Thiết kế web, Marketing, Design, AI Content, WebForge Studio">
+    
+    <!-- Open Graph / Facebook / Zalo -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webforge.vn/portfolio">
+    <meta property="og:title" content="Portfolio - WebForge Studio">
+    <meta property="og:description" content="Khám phá các dự án Marketing, Design, và AI Content đột phá từ WebForge Studio.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1498837167922-41c543bd8056?q=80&w=1200&auto=format&fit=crop">
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,16 +141,13 @@
                     data-filter="all">Tất cả</button>
                 <button
                     class="filter-btn px-7 py-3.5 rounded-full text-sm font-bold transition-all duration-300 bg-gray-50 text-gray-600 hover:bg-gray-100 hover:text-primary hover:-translate-y-1 border border-transparent"
-                    data-filter="sme">SME</button>
+                    data-filter="marketing">Marketing</button>
                 <button
                     class="filter-btn px-7 py-3.5 rounded-full text-sm font-bold transition-all duration-300 bg-gray-50 text-gray-600 hover:bg-gray-100 hover:text-primary hover:-translate-y-1 border border-transparent"
-                    data-filter="startup">Startup</button>
+                    data-filter="design">Design</button>
                 <button
                     class="filter-btn px-7 py-3.5 rounded-full text-sm font-bold transition-all duration-300 bg-gray-50 text-gray-600 hover:bg-gray-100 hover:text-primary hover:-translate-y-1 border border-transparent"
-                    data-filter="ecommerce">Ecommerce</button>
-                <button
-                    class="filter-btn px-7 py-3.5 rounded-full text-sm font-bold transition-all duration-300 bg-gray-50 text-gray-600 hover:bg-gray-100 hover:text-primary hover:-translate-y-1 border border-transparent"
-                    data-filter="student">Sinh viên</button>
+                    data-filter="ai_content">AI Content</button>
             </div>
 
             <!-- Bento Masonry Grid -->
@@ -176,52 +181,52 @@
         // Mock Data for Projects with specific Bento spans
         const projects = [
             {
-                id: 1, title: 'Nova Retail', category: 'ecommerce', catLabel: 'Ecommerce',
+                id: 1, title: 'Chiến Dịch Social Media', category: 'marketing', catLabel: 'Marketing',
                 span: 'md:col-span-2 md:row-span-2 min-h-[400px] md:min-h-0', // Large square
                 img: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1200&auto=format&fit=crop',
-                desc: 'Nền tảng thương mại điện tử đa kênh chuyên nghiệp với trải nghiệm mua sắm mượt mà giúp x3 doanh thu.'
+                desc: 'Tăng x3 lượng tương tác và tiếp cận tự nhiên cho thương hiệu thời trang qua nền tảng Facebook & TikTok.'
             },
             {
-                id: 2, title: 'TechFlow App', category: 'startup', catLabel: 'Startup',
+                id: 2, title: 'TechFlow Branding', category: 'design', catLabel: 'Design',
                 span: 'md:col-span-1 md:row-span-2 min-h-[400px] md:min-h-0', // Tall
                 img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop',
-                desc: 'Thiết kế UI/UX ứng dụng quản lý dự án nội bộ tối ưu cho startup công nghệ hiện đại.'
+                desc: 'Thiết kế bộ nhận diện thương hiệu hiện đại, chuyên nghiệp cho startup công nghệ.'
             },
             {
-                id: 3, title: 'Lumiere Clinic', category: 'sme', catLabel: 'SME',
+                id: 3, title: 'Tối ưu AI Content', category: 'ai_content', catLabel: 'AI Content',
                 span: 'md:col-span-1 md:row-span-1 min-h-[300px] md:min-h-0', // Small square
                 img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop',
-                desc: 'Website đặt lịch phòng khám nha khoa cao cấp chuẩn quốc tế.'
+                desc: 'Ứng dụng AI tạo hàng loạt bài viết chuẩn SEO, tăng gấp đôi traffic tự nhiên.'
             },
             {
-                id: 4, title: 'UniConnect', category: 'student', catLabel: 'Sinh viên',
+                id: 4, title: 'UX/UI Website', category: 'design', catLabel: 'Design',
                 span: 'md:col-span-1 md:row-span-1 min-h-[300px] md:min-h-0', // Small square
                 img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
-                desc: 'Mạng lưới cộng đồng kết nối sinh viên toàn cầu.'
+                desc: 'Thiết kế giao diện website thương mại điện tử với trải nghiệm người dùng đột phá.'
             },
             {
-                id: 5, title: 'FinSmart Wallet', category: 'startup', catLabel: 'Startup',
+                id: 5, title: 'Email Marketing', category: 'marketing', catLabel: 'Marketing',
                 span: 'md:col-span-2 md:row-span-1 min-h-[300px] md:min-h-0', // Wide
                 img: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff0f?q=80&w=1200&auto=format&fit=crop',
-                desc: 'Ví điện tử thông minh quản lý tài chính cá nhân an toàn, bảo mật.'
+                desc: 'Hệ thống tự động hóa email marketing giúp tăng 40% tỷ lệ chuyển đổi.'
             },
             {
-                id: 6, title: 'GreenBite', category: 'sme', catLabel: 'SME',
+                id: 6, title: 'AI Copywriting', category: 'ai_content', catLabel: 'AI Content',
                 span: 'md:col-span-1 md:row-span-1 min-h-[300px] md:min-h-0', // Small square
                 img: 'https://images.unsplash.com/photo-1498837167922-41c543bd8056?q=80&w=800&auto=format&fit=crop',
-                desc: 'Chuỗi cửa hàng phân phối thực phẩm hữu cơ sạch.'
+                desc: 'Sử dụng AI tối ưu kịch bản nội dung cho quảng cáo Facebook.'
             },
             {
-                id: 7, title: 'TrendMart', category: 'ecommerce', catLabel: 'Ecommerce',
+                id: 7, title: 'Logo & Packaging', category: 'design', catLabel: 'Design',
                 span: 'md:col-span-1 md:row-span-2 min-h-[400px] md:min-h-0', // Tall
                 img: 'https://images.unsplash.com/photo-1472851294608-062f124dcb02?q=80&w=800&auto=format&fit=crop',
-                desc: 'Nền tảng mua sắm thời trang trực tuyến với hệ thống CMS cực khủng.'
+                desc: 'Thiết kế bao bì sản phẩm và logo sáng tạo cho thương hiệu mỹ phẩm.'
             },
             {
-                id: 8, title: 'EduPlatform', category: 'student', catLabel: 'Sinh viên',
+                id: 8, title: 'Performance Marketing', category: 'marketing', catLabel: 'Marketing',
                 span: 'md:col-span-2 md:row-span-2 min-h-[400px] md:min-h-0', // Large square
                 img: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1200&auto=format&fit=crop',
-                desc: 'Hệ thống E-learning học trực tuyến chuẩn quốc tế dành riêng cho sinh viên đại học.'
+                desc: 'Chiến dịch quảng cáo tổng thể Google & Facebook Ads mang lại ROI 300%.'
             }
         ];
 
