@@ -1,6 +1,6 @@
 // mobile-menu.js
 document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuBtns = document.querySelectorAll('.md\\:hidden button');
+    const mobileMenuBtns = document.querySelectorAll('.mobile-menu-btn, .md\\:hidden > button');
     let mobileMenu = document.getElementById('mobile-menu');
 
     // Create mobile menu dynamically if it doesn't exist
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (header && desktopNav) {
             mobileMenu = document.createElement('div');
             mobileMenu.id = 'mobile-menu';
-            mobileMenu.className = 'md:hidden hidden-menu absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-xl overflow-hidden';
+            mobileMenu.className = 'md:hidden hidden-menu absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-xl overflow-hidden z-40';
             
             // Clone links
             const linksHtml = Array.from(desktopNav.children).map(link => {
@@ -22,9 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add CTA if exists
             let ctaHtml = '';
             if (desktopCtaContainer) {
-                const ctaBtn = desktopCtaContainer.querySelector('a');
-                if (ctaBtn) {
-                    ctaHtml = `<div class="p-6"><a href="${ctaBtn.getAttribute('href')}" class="block w-full text-center bg-gradient-to-r from-blue-700 to-blue-500 text-white px-7 py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg">${ctaBtn.textContent}</a></div>`;
+                const ctaBtns = desktopCtaContainer.querySelectorAll('a');
+                if (ctaBtns.length > 0) {
+                    const ctaBtn = ctaBtns.length > 1 ? ctaBtns[1] : ctaBtns[0]; // Lấy nút Get Started
+                    ctaHtml = `<div class="p-6"><a href="${ctaBtn.getAttribute('href')}" class="block w-full text-center bg-gradient-to-r from-blue-700 to-blue-500 text-white px-7 py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg">${ctaBtn.textContent.trim()}</a></div>`;
                 }
             }
 

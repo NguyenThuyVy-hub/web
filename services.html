@@ -47,29 +47,38 @@
             <div class="flex justify-between items-center h-24">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center hover:-translate-y-1 transition-all duration-300">
-                    <a href="index.html" class="text-3xl font-extrabold tracking-tighter">
+                    <a href="index.html" class="text-3xl font-extrabold tracking-tighter relative z-50">
                         WebForge<span class="text-accent">.</span>
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
-                <nav class="hidden md:flex space-x-10">
-                    <a href="index.html#services" class="text-sm font-semibold text-accent transition-colors tracking-wide uppercase">Dịch vụ</a>
-                    <a href="index.html#portfolio" class="text-sm font-semibold text-gray-600 hover:text-accent transition-colors tracking-wide uppercase">Portfolio</a>
-                    <a href="index.html#contact" class="text-sm font-semibold text-gray-600 hover:text-accent transition-colors tracking-wide uppercase">Liên hệ</a>
+                <nav class="hidden md:flex space-x-8 lg:space-x-10 items-center">
+                    <a href="services.html"
+                        class="text-sm font-semibold text-gray-600 hover:text-accent transition-colors tracking-wide uppercase">Dịch
+                        vụ</a>
+                    <a href="portfolio.html"
+                        class="text-sm font-semibold text-gray-600 hover:text-accent transition-colors tracking-wide uppercase">Portfolio</a>
+                    <a href="dashboard.html"
+                        class="text-sm font-semibold text-gray-600 hover:text-accent transition-colors tracking-wide uppercase">Dashboard</a>
                 </nav>
 
                 <!-- CTA Button -->
-                <div class="hidden md:flex items-center">
-                    <a href="index.html#contact"
-                        class="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-7 py-3.5 rounded-full font-bold transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_rgba(59,130,246,0.7)] hover:-translate-y-1">
-                        Nhận Báo Giá
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="login.html"
+                        class="text-sm font-bold text-gray-800 hover:text-primary transition-colors uppercase tracking-wide">
+                        Login
+                    </a>
+                    <a href="register.html"
+                        class="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-7 py-3.5 rounded-full font-bold transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_rgba(59,130,246,0.7)] hover:-translate-y-1 uppercase text-sm tracking-wider">
+                        Get Started
                     </a>
                 </div>
-                
+
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="text-gray-900 focus:outline-none p-2">
+                <div class="md:hidden flex items-center gap-4 relative z-50">
+                    <a href="login.html" class="text-sm font-bold text-primary uppercase tracking-wide px-3 py-1.5 bg-blue-50 rounded-lg">Login</a>
+                    <button class="text-gray-900 focus:outline-none p-2 mobile-menu-btn bg-white/50 rounded-full backdrop-blur-sm">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
